@@ -1,0 +1,83 @@
+<html lang="fr">
+<head>
+
+    <title>TheRedStream - Connexion</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="TheRedStream - An Anime streaming platform by TheRedmine TheRedMaths">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="../commons_files/favicon.ico" type="image/x-icon">
+    <link rel="favicon" href="../commons_files/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="../login/style.css">
+    <link rel="stylesheet" href="../commons_files/style.css">
+    <link rel="stylesheet" href="../fonts/poppins.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/sourcesanspro.css">
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+
+	<header>
+        <div class="title">
+            <h1>TheRedStream</h1>
+            <a href="#"><img src="../commons_files/logo_black.png" alt="Logo"></a><!-- à mettre en blanc -->
+        </div>
+
+        <h2>Connexion à un compte déjà existant</h2>
+    </header>
+
+    <a href="#" class="home_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+	
+	<form action="form.php" method="post">
+
+        <p>Se connecter</p>
+
+		<input type="text" name="username" id="username" placeholder="Nom d'utilisateur ou Email" ><br>
+		<input type="password" name="password" id="password" placeholder="Mot de Passe"><br>
+        <i class="fa fa-eye-slash" id="fa-eye" aria-hidden="true" onclick="toggle_mode();" id="eye_toggle"></i>
+
+
+        <!-- <input type="checkbox" name="keep_logged" id="keep_logged">
+        <label for="keep_logged">Se souvenir de moi</label><br><br> -->
+        <span class="passwd_forgotten"><a href="#">J'ai oublié mon de passe</a></span>
+
+		<input type="submit" value="Se connecter"><br>
+
+        <span class="register_link">Je n'ai pas de compte&ensp;<a href="../register">S'inscrire</a></span>
+
+	</form>
+
+    <script type="text/javascript">
+        var eye_toogle = document.getElementById('fa-eye');
+        var input_passwd = document.getElementById('password');
+        var mode = true;
+
+        function toggle_mode() {
+            mode = !mode;
+            console.log(mode)
+            if(mode) {
+                input_passwd.type = "password";
+                eye_toogle.classList.add('fa-eye-slash');
+                eye_toogle.classList.remove('fa-eye');
+            } else {
+                input_passwd.type = "text";
+                eye_toogle.classList.add('fa-eye');
+                eye_toogle.classList.remove('fa-eye-slash');
+            }
+        }
+    </script>
+	
+</body>
+</html>

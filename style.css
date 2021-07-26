@@ -1,0 +1,185 @@
+header h2 { text-align: center; }
+
+.home_btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.25s;
+    color: #888;
+    font-size: 2rem;
+}
+
+.home_btn:hover { color: #0ac; }
+
+.home_btn span {
+    display: block;
+    position: absolute;
+    background: #0ac;
+}
+
+.home_btn span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 150ms;
+}
+
+.home_btn:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 150ms;
+}
+
+.home_btn span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 150ms;
+}
+
+.home_btn:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 150ms;
+}
+
+.home_btn span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 150ms;
+    transition-delay: 150ms;
+}
+
+.home_btn:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 150ms;
+    transition-delay: 150ms;
+}
+
+.home_btn span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 150ms;
+    transition-delay: 150ms;
+}
+
+.home_btn:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 150ms;
+    transition-delay: 150ms;
+}
+
+form {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background: #0ac;
+    left: calc(50% - 150px);
+    top: 10vh;
+    border-radius: 20px;
+}
+
+form p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'SourceSansPro-Bold';
+    font-size: 2rem;
+    padding: 15px;
+}
+
+form input#username, form input#password {
+    border: none;
+    outline: none;
+    background: #fff;
+    width: 80%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10%;
+}
+
+form input#username { margin-bottom: 5px; }
+
+form #fa-eye {
+    position: relative;
+    color: #888;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    bottom: 22px;
+    left: calc(80% + 5px);
+    transition: .2s;
+    cursor: pointer;
+}
+
+form #fa-eye:hover {color: #0ac; }
+
+form .passwd_forgotten {
+    font-size: .8rem;
+    margin-left: calc(10% - 20px);
+    opacity: 1;
+}
+
+form .passwd_forgotten a {
+    color: #fff;
+    transition: all .4s;
+}
+
+form input[type="submit"] {
+    text-align: center;
+    width: 40%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'SourceSansPro-SemiBold';
+    cursor: pointer;
+    background: #fff;
+    border-radius: 20px;
+    margin: 30px 0 5px 30%;
+    padding: 5px 0;
+    transition: all .4s;
+    opacity: 1;
+}
+
+form input[type="submit"]:hover { opacity: .9; }
+
+form .register_link {
+    display: flex;
+    position: relative;
+    width: 65%;
+    font-size: 0.8rem;
+    margin: 22px 0 0 23px;
+    color: #fff;
+}
+
+form .register_link a {
+    color: #000;
+    opacity: 1;
+    transition: all .4s;
+}
+
+form .register_link:hover a,
+form .passwd_forgotten:hover a {
+    opacity: .9;
+}
